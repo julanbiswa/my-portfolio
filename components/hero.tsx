@@ -36,7 +36,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mb-6 text-xl md:text-2xl text-foreground/70 font-light">BCA Student & Full-Stack Developer</p>
+            <p className="mb-6 text-xl md:text-2xl text-foreground/70 font-light">BCA Student & Frontend Developer</p>
 
             <p className="mb-8 max-w-2xl text-base md:text-lg text-foreground/60 leading-relaxed">
               I'm a passionate developer crafting beautiful, responsive web applications with modern technologies.

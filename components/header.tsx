@@ -26,7 +26,7 @@ export default function Header({ scrolled }: HeaderProps) {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="text-2xl font-bold">
-          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">JB</span>
+          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">&lt;JB /&gt;</span>
         </div>
 
         {/* Desktop Menu */}
