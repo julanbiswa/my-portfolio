@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-32 overflow-hidden bg-gradient-to-br from-background via-card to-background px-6"
+      className="relative min-h-screen pt-25 overflow-hidden bg-gradient-to-br from-background via-card to-background px-6"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
