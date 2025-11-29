@@ -91,7 +91,7 @@ export default function Hero() {
               className="relative w-80 h-80 rounded-full overflow-hidden flex-shrink-0"
               style={{
                 border: "4px solid var(--secondary)",
-                boxShadow: "0 0 55px rgba(0.6 0.118 184.704)",
+                boxShadow: "0 0 55px rgb(0.6 0.118 184.704)",
               }}
             >
               <Image
