@@ -1,0 +1,19 @@
+# Allow all web crawlers to access the site
+User-agent: *
+Allow: /
+Disallow: /.next/
+Disallow: /node_modules/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (in seconds) - optional
+Crawl-delay: 1
+
+# Specify sitemap location
+Sitemap: https://julanbishwakarma.com/sitemap.xml

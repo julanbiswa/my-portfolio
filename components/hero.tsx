@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-20 overflow-hidden bg-gradient-to-br from-background via-card to-background px-6"
+      className="relative min-h-screen pt-32 overflow-hidden bg-gradient-to-br from-background via-card to-background px-6"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -36,7 +36,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mb-6 text-xl md:text-2xl text-foreground/70 font-light">BCA Student & Frontend Developer</p>
+            <p className="mb-6 text-xl md:text-2xl text-foreground/70 font-light">BCA Student & Full-Stack Developer</p>
 
             <p className="mb-8 max-w-2xl text-base md:text-lg text-foreground/60 leading-relaxed">
               I'm a passionate developer crafting beautiful, responsive web applications with modern technologies.
@@ -91,15 +91,16 @@ export default function Hero() {
               className="relative w-80 h-80 rounded-full overflow-hidden flex-shrink-0"
               style={{
                 border: "4px solid var(--secondary)",
-                boxShadow: "0 0 55px rgb(0.6 0.118 184.704)",
+                boxShadow: "0 0 40px rgba(0, 0, 0, 0.2)",
               }}
             >
               <Image
                 src="/profile.JPG"
-                alt="Julan Bishwakarma"
+                alt="Julan Bishwakarma - Full-Stack Developer Portrait"
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 768px) 0px, 320px"
               />
             </div>
           </div>

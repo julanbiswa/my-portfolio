@@ -52,7 +52,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-gradient-to-br from-background via-card to-background py-20 px-6">
+    <section id="contact" className="bg-gradient-to-br from-background via-card to-background py-20 px-6" aria-label="Contact section">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12">
           <h2 className="mb-4 text-4xl md:text-5xl font-bold">
@@ -68,24 +68,24 @@ export default function Contact() {
           <div className="space-y-8">
             <div className="group">
               <div className="mb-3 flex items-center gap-3">
-                <div className="rounded-lg bg-primary/20 p-3">
+                <div className="rounded-lg bg-primary/20 p-3" aria-hidden="true">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold">Email</h3>
               </div>
-              <a href="mailto:julanbiswa@gmail.com" className="text-foreground/70 hover:text-accent transition-colors">
+              <a href="mailto:julanbiswa@gmail.com" className="text-foreground/70 hover:text-accent transition-colors" aria-label="Send email to julanbiswa@gmail.com">
                 julanbiswa@gmail.com
               </a>
             </div>
 
             <div className="group">
               <div className="mb-3 flex items-center gap-3">
-                <div className="rounded-lg bg-accent/20 p-3">
+                <div className="rounded-lg bg-accent/20 p-3" aria-hidden="true">
                   <Phone className="h-6 w-6 text-accent" />
                 </div>
                 <h3 className="text-lg font-semibold">Phone</h3>
               </div>
-              <a href="tel:+9779819957105" className="text-foreground/70 hover:text-accent transition-colors">
+              <a href="tel:+9779819957105" className="text-foreground/70 hover:text-accent transition-colors" aria-label="Call +977 9819957105">
                 +977 9819957105
               </a>
             </div>
@@ -111,7 +111,7 @@ export default function Contact() {
                     style={{
                       border: "1px solid rgba(0, 0, 0, 0.5)",
                     }}
-                    aria-label={social.name}
+                    aria-label={`Visit Julan's ${social.name} profile`}
                   >
                     {social.icon}
                   </a>
@@ -121,10 +121,10 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
             <div>
               <label htmlFor="fullName" className="mb-2 block text-sm font-medium">
-                Full Name
+                Full Name <span aria-label="required">*</span>
               </label>
               <input
                 type="text"
@@ -153,7 +153,7 @@ export default function Contact() {
 
             <div>
               <label htmlFor="email" className="mb-2 block text-sm font-medium">
-                Email
+                Email <span aria-label="required">*</span>
               </label>
               <input
                 type="email"
@@ -181,7 +181,7 @@ export default function Contact() {
 
             <div>
               <label htmlFor="subject" className="mb-2 block text-sm font-medium">
-                Subject
+                Subject <span aria-label="required">*</span>
               </label>
               <input
                 type="text"
@@ -209,7 +209,7 @@ export default function Contact() {
 
             <div>
               <label htmlFor="message" className="mb-2 block text-sm font-medium">
-                Message
+                Message <span aria-label="required">*</span>
               </label>
               <textarea
                 id="message"
@@ -243,6 +243,8 @@ export default function Contact() {
                   backgroundColor: "rgba(34, 197, 94, 0.1)",
                   color: "rgb(134, 239, 172)",
                 }}
+                role="status"
+                aria-live="polite"
               >
                 ✓ Message sent successfully! I'll get back to you soon.
               </div>
@@ -256,6 +258,8 @@ export default function Contact() {
                   backgroundColor: "rgba(239, 68, 68, 0.1)",
                   color: "rgb(252, 165, 165)",
                 }}
+                role="alert"
+                aria-live="assertive"
               >
                 ✗ Failed to send message. Please try again.
               </div>
@@ -268,6 +272,7 @@ export default function Contact() {
               style={{
                 boxShadow: "0 0 20px rgba(80, 200, 255, 0.3)",
               }}
+              aria-busy={isSubmitting}
             >
               <Send className="h-5 w-5" />
               {isSubmitting ? "Sending..." : "Send Message"}

@@ -21,14 +21,14 @@ export default function Home() {
   return (
     <div className="bg-background text-foreground">
       <Header scrolled={scrolled} />
-      <main>
+      <main role="main">
         <Hero />
         <Skills />
         <Contact />
       </main>
-      <footer className="border-t" style={{ borderColor: "var(--border)" }}>
+      <footer className="border-t" style={{ borderColor: "var(--border)" }} role="contentinfo">
         <div className="mx-auto max-w-6xl px-6 py-8 text-center text-sm text-muted-foreground">
-          <p>© 2025 Julan Bishwakarma. All rights reserved.</p>
+          <p>&copy; 2025 Julan Bishwakarma. All rights reserved.</p>
         </div>
       </footer>
     </div>

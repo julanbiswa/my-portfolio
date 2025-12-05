@@ -42,6 +42,7 @@ export default function Skills() {
       style={{
         borderTop: "1px solid var(--border)",
       }}
+      aria-label="Skills section"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-12">
@@ -65,13 +66,15 @@ export default function Skills() {
               style={{
                 transitionDelay: isVisible ? `${index * 100}ms` : "0ms",
               }}
+              role="article"
+              aria-label={`${skill.name} skill with ${skill.percentage}% proficiency`}
             >
               <div className="mb-3 flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-foreground">{skill.name}</h3>
-                <span className="text-sm font-bold text-accent">{skill.percentage}%</span>
+                <span className="text-sm font-bold text-accent" aria-label="Proficiency percentage">{skill.percentage}%</span>
               </div>
 
-              <div className="skill-bar">
+              <div className="skill-bar" role="progressbar" aria-valuenow={skill.percentage} aria-valuemin={0} aria-valuemax={100} aria-label={`${skill.name} proficiency`}>
                 <div
                   className="skill-fill"
                   style={
@@ -98,6 +101,8 @@ export default function Skills() {
               border: "1px solid rgba(0, 0, 0, 0.5)",
               backgroundColor: "rgba(18, 30, 40, 0.5)",
             }}
+            role="complementary"
+            aria-label="Frontend specialization"
           >
             <h4 className="mb-3 text-lg font-semibold text-primary">Frontend</h4>
             <p className="text-sm text-foreground/60">
@@ -111,6 +116,8 @@ export default function Skills() {
               border: "1px solid rgba(0, 0, 0, 0.5)",
               backgroundColor: "rgba(18, 30, 40, 0.5)",
             }}
+            role="complementary"
+            aria-label="Currently learning"
           >
             <h4 className="mb-3 text-lg font-semibold text-accent">Currently Learning</h4>
             <p className="text-sm text-foreground/60">
